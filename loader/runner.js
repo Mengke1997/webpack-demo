@@ -1,5 +1,5 @@
-// let { runLoaders } = require('./loader-runner')
-let { runLoaders } = require('loader-runner')
+let { runLoaders } = require('./loader-runner')
+// let { runLoaders } = require('loader-runner')
 let path = require('path')
 let fs = require('fs')
 let filePath = path.resolve(__dirname, 'src', 'index.js') //入口模块
@@ -54,12 +54,11 @@ if (request.startsWith('!!')) {
   loaders = [...postLoaders, ...inlineLoaders, ...normalLoaders, ...preLoaders]
 }
 loaders = loaders.map(resolveLoader)
-console.log(loaders)
-
+debugger
 runLoaders(
   {
     resource, //要加载和转换的模块
-    loaders, //laoder的绝对路径数组
+    loaders, //loader的绝对路径数组
     context: { name: 'zz' }, //基础的上下文对象
     readResource: fs.readFile.bind(fs), //读取硬盘文件的方法
   },
