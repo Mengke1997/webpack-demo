@@ -1,10 +1,10 @@
-let { runLoaders } = require('./loader-runner')
-// let { runLoaders } = require('loader-runner')
+// let { runLoaders } = require('./loader-runner')
+let { runLoaders } = require('loader-runner')
 let path = require('path')
 let fs = require('fs')
 let filePath = path.resolve(__dirname, 'src', 'index.js') //入口模块
 
-//写在require的laoder被称为行内loader
+//写在require的loader被称为行内loader
 let request = `inline1-loader!inline2-loader!${filePath}`
 //不同的loader并不是loader的类型属性，而是你在使用的时候使用了什么样的enforce
 let rules = [
