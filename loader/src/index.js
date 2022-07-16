@@ -6,7 +6,10 @@
 // arrow()
 
 
-let logoSrc=require('./images/6.jpeg')
-let image=new Image()
-image.src=logoSrc
-document.body.appendChild(image)
+// let logoSrc=require('./images/6.jpeg')
+// let image=new Image()
+// image.src=logoSrc
+// document.body.appendChild(image)
+
+
+import ('./index.less')
