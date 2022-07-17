@@ -47,7 +47,13 @@ module.exports = {
             },
           },
         ],
-      },
+      },{
+        test:/\.less$/,
+        use:[
+          'style-loader2',
+          'less-loader2'
+        ]
+      }
     ],
   },
   plugins: [
